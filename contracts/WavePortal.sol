@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-contract WavePortal11 {
+contract WavePortal {
     constructor() {
         console.log("YOU KNOW WHAT I AMwwwww SAYING IT?");
     }
