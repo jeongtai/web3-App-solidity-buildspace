@@ -5,7 +5,7 @@ describe("Greeter", function () {
   it("Should return the new greeting once it's changed", async function () {
     const Greeter = await ethers.getContractFactory("WavePortal11");
     const greeter = await Greeter.deploy();
-    // await greeter.deployed();
+    await greeter.deployed(); // 이미 배포 되어있는 컨트랙을 가져온다
 
     // expect(await greeter.greet()).to.equal("Hello, world!");
 
