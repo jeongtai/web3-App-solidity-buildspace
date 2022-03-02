@@ -6,7 +6,8 @@ import "hardhat/console.sol";
 
 contract WavePortal {
     uint256 totalWaves;
-    string[] public senderAddress;
+     address payable public manager;
+     address[] public senderAddress;
 
     constructor() {
         console.log("YOU KNOW WHAT I AMwwwww SAYING IT?");
@@ -14,7 +15,7 @@ contract WavePortal {
 
     function wave() public {
         totalWaves += 1;
-        console.log("%s has waved!", msg.sender); // msg.sender = 함수 호출한 지갑 주소
+        console.log("%s has waved!", msg.sender);
     }
 
     function getTotalWaves() public view returns (uint256) {
@@ -23,7 +24,7 @@ contract WavePortal {
     }
 
     function saveSenderAddressPush() public {
-        senderAddress.push(string(msg.sender));
-        console.log(senderAddress);
-    }
+        senderAddress.push(msg.sender);
+        console.log("senders is {} ", senderAddress[0]);
+    }//Member "log" not found or not visible after argument-dependent lookup in type(library console).
 }

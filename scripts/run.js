@@ -20,7 +20,9 @@ const main = async () => {
 
     waveCount = await waveContract.getTotalWaves();
 
-    waveContract.saveSenderAddressPush();
+    waveSender = await waveContract.saveSenderAddressPush();
+    await waveSender.wait();
+
   };
   
   const runMain = async () => {
